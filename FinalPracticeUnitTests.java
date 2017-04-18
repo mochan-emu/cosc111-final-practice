@@ -72,4 +72,16 @@ public class FinalPracticeUnitTests
     	assertEquals(5, Helper.SumofSumFrom0(1, 2, 1));
     	assertEquals(10, Helper.SumofSumFrom0(3, 2, 1));
     }
+    
+    /*
+     * Test toString function of Circle is correct
+     */
+    @Test
+    public void Test6ShapeToString()
+    {
+    	Shape c1 = new Circle(10);
+    	assertEquals("Circle (r=10)", c1.toString());
+    	Shape c2 = new Circle(1);
+    	assertEquals("Circle (r=1)", c2.toString());
+    }
 }
