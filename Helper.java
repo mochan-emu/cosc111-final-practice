@@ -83,4 +83,13 @@ public class Helper
     {
     	return null;
     }
+    
+    /*
+     * Create a gadget with the same part number but serial number
+     * which is one more than the ref gadget.
+     */
+    public static Gadget newGadgetSerial(Gadget ref)
+    {
+    	return null;
+    }
 }

@@ -90,6 +90,7 @@ public class FinalPracticeUnitTests
      * the monthly payment over 60 months is calculated
      * correctly.
      */
+    @Test
     public void Test7CarPayments()
     {
     	Car c1 = new Car("Ford Focus 2017", 15000);
@@ -107,6 +108,7 @@ public class FinalPracticeUnitTests
      * Test that the random number between max and min
      * are generated for different max and mins.
      */
+    @Test
     public void Test8GenerateRandom()
     {
     	int i1 = Helper.generateRandom(4, 10);
@@ -127,6 +129,7 @@ public class FinalPracticeUnitTests
      * Tests that the returned array has the right length and the
      * array is filled with the right numbers
      */
+    @Test
     public void Test9CreateArray()
     {
     	int[] data1 = Helper.createArrayWithConsecutiveNumbers(1, 5);
@@ -141,6 +144,26 @@ public class FinalPracticeUnitTests
     	assertEquals(11, data3.length);
     	for (int i=0; i<data2.length; i++)
     		assertEquals(10+i, data2[i]);
+    }
+    
+    /* Create a new gadget with the same part number but the 
+     * serial number one greater.
+     */
+    @Test
+    public void Test10NewGadgetSerial()
+    {
+    	Gadget g1 = new Gadget(123, 111);
+    	Gadget g2 = Helper.newGadgetSerial(g1);
+    	assertEquals(g1.getPartNumber(), g2.getPartNumber());
+    	assertEquals(g1.getSerialNumber() + 1, g2.getSerialNumber());
+    	g1 = new Gadget(4115, 11);
+    	g2 = Helper.newGadgetSerial(g1);
+    	assertEquals(g1.getPartNumber(), g2.getPartNumber());
+    	assertEquals(g1.getSerialNumber() + 1, g2.getSerialNumber());
+    	g1 = new Gadget(5897, 56);
+    	g2 = Helper.newGadgetSerial(g1);
+    	assertEquals(g1.getPartNumber(), g2.getPartNumber());
+    	assertEquals(g1.getSerialNumber() + 1, g2.getSerialNumber());
     }
 }
 
