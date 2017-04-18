@@ -84,4 +84,22 @@ public class FinalPracticeUnitTests
     	Shape c2 = new Circle(1);
     	assertEquals("Circle (r=1)", c2.toString());
     }
+    
+    /*
+     * Test that the car is initialized properly and that
+     * the monthly payment over 60 months is calculated
+     * correctly.
+     */
+    public void Test7CarPayments()
+    {
+    	Car c1 = new Car("Ford Focus 2017", 15000);
+    	assertEquals("Ford Focus 2017", c1.getName());
+    	assertEquals(15000, c1.getPrice(), .01);
+    	assertEquals(250, c1.getMonthly_payment(), 0.01);
+    	
+    	Car c2 = new Car("Ford Escape 2017", 20000);
+    	assertEquals("Ford Escape 2017", c2.getName());
+    	assertEquals(20000, c2.getPrice(), .01);
+    	assertEquals(333.333, c2.getMonthly_payment(), .01);
+    }
 }
