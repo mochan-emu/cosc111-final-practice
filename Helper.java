@@ -63,4 +63,24 @@ public class Helper
     {
     	return 0;
     }
+    
+    /*
+     * Generate a random number between min and max with the
+     * possibility of values at min and max included
+     */
+    public static int generateRandom(int min, int max)
+    {
+    	return 0;
+    }
+    
+    /*
+     * Create an array of integers. The array should have
+     * integers starting at start and then ending at end.
+     * You will have to make the array long each to accomodate
+     * that.
+     */
+    public static int[] createArrayWithConsecutiveNumbers(int start, int end)
+    {
+    	return null;
+    }
 }

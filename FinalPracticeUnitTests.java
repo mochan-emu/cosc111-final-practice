@@ -102,4 +102,45 @@ public class FinalPracticeUnitTests
     	assertEquals(20000, c2.getPrice(), .01);
     	assertEquals(333.333, c2.getMonthly_payment(), .01);
     }
+    
+    /*
+     * Test that the random number between max and min
+     * are generated for different max and mins.
+     */
+    public void Test8GenerateRandom()
+    {
+    	int i1 = Helper.generateRandom(4, 10);
+    	assertTrue(i1 >= 4 && i1 <= 10);
+    	i1 = Helper.generateRandom(4, 10);
+    	assertTrue(i1 >= 4 && i1 <= 10);
+    	int i2 = Helper.generateRandom(25, 100);
+    	assertTrue(i2 >= 25 && i2 <= 100);
+    	i2 = Helper.generateRandom(25, 100);
+    	assertTrue(i2 >= 25 && i2 <= 100);
+    	int i3 = Helper.generateRandom(-10, 30);
+    	assertTrue(i3 >= 10 && i3 <= 30);
+    	i3 = Helper.generateRandom(-10, 30);
+    	assertTrue(i3 >= 10 && i3 <= 30);
+    }
+    
+    /*
+     * Tests that the returned array has the right length and the
+     * array is filled with the right numbers
+     */
+    public void Test9CreateArray()
+    {
+    	int[] data1 = Helper.createArrayWithConsecutiveNumbers(1, 5);
+    	assertEquals(5, data1.length);
+    	for (int i=0; i<data1.length; i++)
+    		assertEquals(1+i, data1[i]);
+    	int[] data2 = Helper.createArrayWithConsecutiveNumbers(-5, 5);
+    	assertEquals(11, data2.length);
+    	for (int i=0; i<data2.length; i++)
+    		assertEquals(-5+i, data2[i]);
+    	int[] data3 = Helper.createArrayWithConsecutiveNumbers(10, 20);
+    	assertEquals(11, data3.length);
+    	for (int i=0; i<data2.length; i++)
+    		assertEquals(10+i, data2[i]);
+    }
 }
+
